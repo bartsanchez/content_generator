@@ -6,3 +6,10 @@ class Layout(models.Model):
 
     def __str__(self):
         return 'layout {id}: {name}'.format(id=self.id, name=self.name)
+
+
+class Section(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return 'section {id}: {name}'.format(id=self.id, name=self.name)
