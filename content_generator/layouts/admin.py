@@ -18,6 +18,7 @@ class ContentInlineAdmin(admin.TabularInline):
 class SectionAdmin(admin.ModelAdmin):
     inlines = (ContentInlineAdmin,)
 
+
 admin.site.register(models.Layout, LayoutAdmin)
 admin.site.register(models.Section, SectionAdmin)
 admin.site.register(models.Content)
