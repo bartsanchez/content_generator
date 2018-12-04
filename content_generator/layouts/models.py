@@ -29,7 +29,7 @@ class Layout(models.Model):
 class LayoutSection(models.Model):
     layout = models.ForeignKey(Layout, on_delete=models.CASCADE)
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
-    priority = models.IntegerField()
+    priority = models.PositiveIntegerField()
 
     class Meta:
         unique_together = ('layout', 'priority')
