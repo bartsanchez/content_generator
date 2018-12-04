@@ -8,6 +8,16 @@ class Section(models.Model):
         return 'section {id}: {name}'.format(id=self.id, name=self.name)
 
 
+class Content(models.Model):
+    name = models.CharField(max_length=255)
+    content = models.TextField()
+    section = models.ForeignKey(Section, on_delete=models.SET_NULL,
+                                null=True, blank=True)
+
+    def __str__(self):
+        return 'content {id}: {name}'.format(id=self.id, name=self.name)
+
+
 class Layout(models.Model):
     name = models.CharField(max_length=255)
     sections = models.ManyToManyField(Section, through='LayoutSection')
