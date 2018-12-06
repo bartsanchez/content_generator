@@ -25,6 +25,10 @@ class Layout(models.Model):
     def __str__(self):
         return 'layout {id}: {name}'.format(id=self.id, name=self.name)
 
+    def get_prioritized_sections(self):
+        layout_sections = self.layoutsection_set.order_by('priority')
+        return [layout_section.section for layout_section in layout_sections]
+
 
 class LayoutSection(models.Model):
     layout = models.ForeignKey(Layout, on_delete=models.CASCADE)
