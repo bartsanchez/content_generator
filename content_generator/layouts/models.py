@@ -7,6 +7,9 @@ class Section(models.Model):
     def __str__(self):
         return 'section {id}: {name}'.format(id=self.id, name=self.name)
 
+    def get_random_content(self):
+        return self.content_set.order_by('?').first()
+
 
 class Content(models.Model):
     name = models.CharField(max_length=255)

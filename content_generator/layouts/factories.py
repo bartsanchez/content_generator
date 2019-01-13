@@ -10,6 +10,15 @@ class SectionFactory(factory.django.DjangoModelFactory):
     name = 'fake_section'
 
 
+class ContentFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = models.Content
+
+    name = 'fake_section'
+    content = 'fake_content'
+    section = factory.SubFactory(SectionFactory)
+
+
 class LayoutFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = models.Layout
