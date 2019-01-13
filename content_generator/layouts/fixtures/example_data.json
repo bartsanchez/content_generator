@@ -1,0 +1,120 @@
+[
+{
+  "model": "layouts.section",
+  "pk": 1,
+  "fields": {
+    "name": "Title"
+  }
+},
+{
+  "model": "layouts.section",
+  "pk": 2,
+  "fields": {
+    "name": "Subtitle"
+  }
+},
+{
+  "model": "layouts.section",
+  "pk": 3,
+  "fields": {
+    "name": "Body"
+  }
+},
+{
+  "model": "layouts.content",
+  "pk": 1,
+  "fields": {
+    "name": "amazing",
+    "content": "Amazing post!",
+    "section": 1
+  }
+},
+{
+  "model": "layouts.content",
+  "pk": 2,
+  "fields": {
+    "name": "new",
+    "content": "Incredible new post.",
+    "section": 1
+  }
+},
+{
+  "model": "layouts.content",
+  "pk": 3,
+  "fields": {
+    "name": "funny",
+    "content": "This is a funny subtitle.",
+    "section": 2
+  }
+},
+{
+  "model": "layouts.content",
+  "pk": 4,
+  "fields": {
+    "name": "incredible",
+    "content": "A hard to believe subtitle.",
+    "section": 2
+  }
+},
+{
+  "model": "layouts.content",
+  "pk": 5,
+  "fields": {
+    "name": "serious",
+    "content": "A very serious subtitle here.",
+    "section": 2
+  }
+},
+{
+  "model": "layouts.content",
+  "pk": 6,
+  "fields": {
+    "name": "Lorem ipsum",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas neque, sed viverra erat. Cras lobortis feugiat risus quis volutpat. Vestibulum rutrum urna ut metus pretium laoreet. Phasellus elementum quis nibh sed condimentum. Ut at elementum nisl. In convallis, nisi at volutpat ultrices, eros orci egestas leo, nec vulputate elit dolor eu erat. Etiam malesuada hendrerit diam. Nunc eget massa tempus, congue magna in, varius nisl. Nullam ut porttitor nibh, nec pretium diam. Fusce luctus, sem eget convallis gravida, orci justo porta augue, sit amet accumsan velit felis eget metus. Vivamus vestibulum eleifend dolor, eu rutrum orci eleifend quis. Donec tristique ante eget nisi tincidunt, eget ultricies orci sagittis.",
+    "section": 3
+  }
+},
+{
+  "model": "layouts.content",
+  "pk": 7,
+  "fields": {
+    "name": "mata hari",
+    "content": "Margaretha Zelle was born 7 August 1876, in Leeuwarden, Netherlands.[3] She was the eldest of four children of Adam Zelle (2 October 1840 \u2013 13 March 1910) and his first wife Antje van der Meulen (21 April 1842 \u2013 9 May 1891).[4] She had three brothers. Her father owned a hat shop, made successful investments in the oil industry, and became affluent enough to give Margaretha a lavish early childhood[5] that included exclusive schools until the age of 13.[6] Despite traditional assertions that Mata Hari was partly of Javanese, i.e. Indonesian, descent, scholars conclude she had no Asian or Middle Eastern ancestry and both her parents were Dutch.[7]\r\n\r\nSoon after Margaretha's father went bankrupt in 1889, her parents divorced, and then her mother died in 1891.[5][6] Her father remarried in Amsterdam on 9 February 1893 to Susanna Catharina ten Hoove (11 March 1844 \u2013 1 December 1913), by whom he had no children. The family fell apart, and Margaretha moved to live with her godfather, Mr. Visser, in Sneek. Subsequently, she studied to be a kindergarten teacher in Leiden, but when the headmaster began to flirt with her conspicuously, she was removed from the institution by her offended godfather.[5][6][8] A few months later, she fled to her uncle's home in The Hague.[8]",
+    "section": 3
+  }
+},
+{
+  "model": "layouts.layout",
+  "pk": 1,
+  "fields": {
+    "name": "Example blog post"
+  }
+},
+{
+  "model": "layouts.layoutsection",
+  "pk": 1,
+  "fields": {
+    "layout": 1,
+    "section": 1,
+    "priority": 1
+  }
+},
+{
+  "model": "layouts.layoutsection",
+  "pk": 2,
+  "fields": {
+    "layout": 1,
+    "section": 2,
+    "priority": 2
+  }
+},
+{
+  "model": "layouts.layoutsection",
+  "pk": 3,
+  "fields": {
+    "layout": 1,
+    "section": 3,
+    "priority": 3
+  }
+}
+]
