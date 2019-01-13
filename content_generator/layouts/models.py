@@ -32,6 +32,13 @@ class Layout(models.Model):
         layout_sections = self.layoutsection_set.order_by('priority')
         return [layout_section.section for layout_section in layout_sections]
 
+    def generate_text(self):
+        sections = self.get_prioritized_sections()
+        text = '\n'.join(
+            [section.get_random_content().content for section in sections]
+        )
+        return text
+
 
 class LayoutSection(models.Model):
     layout = models.ForeignKey(Layout, on_delete=models.CASCADE)

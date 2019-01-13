@@ -1,10 +1,12 @@
 import unittest
 
+import mock
+
 from layouts import factories
 from layouts import models
 
 
-class LayoutPriorityTests(unittest.TestCase):
+class LayoutTests(unittest.TestCase):
     def setUp(self):
         self.layout = factories.LayoutFactory()
 
@@ -28,10 +30,25 @@ class LayoutPriorityTests(unittest.TestCase):
             priority=4,
         )
 
+        self.content_1 = factories.ContentFactory(content='foo')
+        self.content_2 = factories.ContentFactory(content='bar')
+        self.content_3 = factories.ContentFactory(content='spam')
+
     def test_get_prioritized_sections(self):
         self.assertEqual(
             self.layout.get_prioritized_sections(),
             [self.section_2, self.section_3, self.section_1],
+        )
+
+    @mock.patch('layouts.models.Section.get_random_content')
+    def test_generate_text(self, generate_random_content_mock):
+        generate_random_content_mock.side_effect = [
+            self.content_2, self.content_3, self.content_1
+        ]
+
+        self.assertEqual(
+            self.layout.generate_text(),
+            'bar\nspam\nfoo',
         )
 
 
