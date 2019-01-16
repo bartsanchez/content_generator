@@ -8,6 +8,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+allowed_host = os.environ.get('ALLOWED_HOST')
+if allowed_host:
+    ALLOWED_HOSTS.append(allowed_host)
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
